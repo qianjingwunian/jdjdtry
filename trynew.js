@@ -11,9 +11,9 @@
  参考环境变量配置如下：
 export JD_TRY="true"
 export JD_TRY_PLOG="true" #是否打印输出到日志
-export JD_TRY_PASSZC="true" #过滤种草官类试用
+export JD_TRY_PASSZC="false" #过滤种草官类试用
 export JD_TRY_MAXLENGTH="50" #商品数组的最大长度
-export JD_TRY_APPLYINTERVAL="5000" #商品试用之间和获取商品之间的间隔
+export JD_TRY_APPLYINTERVAL="10000" #商品试用之间和获取商品之间的间隔
 export JD_TRY_APPLYNUMFILTER="100000" #过滤大于设定值的已申请人数
 export JD_TRY_MINSUPPLYNUM="1" #最小提供数量
 export JD_TRY_SENDNUM="10" #每隔多少账号发送一次通知，不需要可以不用设置
@@ -62,7 +62,7 @@ let args_xh = {
      * 例如设置 JD_TRY_PRICE 为 30，假如现在正在遍历tab1，那tab1就会被遍历到30页，到31页就会跳到tab2，或下一个预设的tab页继续遍历到30页
      * 默认为20
      */
-    totalPages: process.env.JD_TRY_TOTALPAGES * 1 || 20,
+    totalPages: process.env.JD_TRY_TOTALPAGES * 1 || 30,
     /*
      * 由于每个账号每次获取的试用产品都不一样，所以为了保证每个账号都能试用到不同的商品，之前的脚本都不支持采用统一试用组的
      * 以下环境变量是用于指定是否采用统一试用组的
